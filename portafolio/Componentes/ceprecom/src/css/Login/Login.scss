@@ -1,0 +1,75 @@
+body{
+    background: #040f0f;
+}
+.headerLogin{
+    width: 244px;
+    margin-left: 80px;
+    margin-top: 21px;
+    height: 124px;
+}
+.txtSesion{
+    color: #0074D9;
+    font-weight: bolder;
+    font-size: 28px;
+    height: 17px;
+}
+.txtInfo{
+    color: #AAAAAA;
+    font-size: 16px;
+}
+.circulo{
+    width: 240px;
+    height: 180px;
+    border-top-left-radius: 2px solid 0px;
+    border-top-right-radius: 16%;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 100%;
+    margin-left: 250px;
+    margin-top: 3px;
+    background: linear-gradient(44deg, rgba(0,116,217,1) 30%, rgba(57,204,204,1) 100%);
+}
+.marcoFoto{
+    width: 200px;
+    height: 170px;
+    background-image: linear-gradient(white, white), linear-gradient(white, white), linear-gradient(white, white), linear-gradient(white, white), linear-gradient(white, white), linear-gradient(white, white), linear-gradient(white, white), linear-gradient(white, white);
+    background-repeat: no-repeat;
+    background-size: 1px 16%, 16% 1px, 1px 16%, 16% 1px, 1px 16%, 16% 1px, 1px 16%, 16% 1px;
+    background-position: left top, left top, right top, right top, left bottom, left bottom, right bottom, right bottom;
+}
+.circuloFoto{
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background: #0074D9;
+    position: absolute;
+    left: 527px;
+    top: 237px;
+}
+.labelTxt{
+    width: 10px;
+    font-size: 32px;
+    color: #ffffff;
+    padding-top: 75px;
+    padding-left: 13px;
+}
+.datosUsuario{
+    margin-top: 35px;
+    margin-left: 274px;
+    width: 300px;
+    height: auto;
+}
+.separador{
+    width: 318px;
+    height: 1px;
+    background: #AAAAAA;
+    margin-top:11px;
+}
+.olvidar_pass{
+    background: transparent;
+    color: #ffffff;
+    width: 318px;
+    margin-top: 11px;
+    border: none;
+    cursor: pointer;
+}
+

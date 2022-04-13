@@ -1,0 +1,95 @@
+.mensaje{
+    .mensaje-bienvenido{
+        font-family: arvo;
+        color: #7f8c8d;
+        font-size: 30px;
+        height: 10px;
+        text-align: center;
+    }
+    .mensaje-pregunta{
+        font-family: arvo;
+        color: #7f8c8d;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.column {
+    flex: 1 0 16%; /* The important bit. This percentage decides your columns. 
+   The percent can be px. It just represents your minimum starting width.
+    */
+    margin: 15px;
+    background: tomato;
+    color: #7f8c8d;
+    height: auto;
+    //color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.column-second{
+    background: #FFFFFF;
+    border-radius: 5px;
+    max-width: 100%;
+
+    .image{
+        display: block;
+        position: relative;
+        margin-block-start: 1em;
+        margin-block-end: 0em;
+        margin-inline-start: 22px;
+        margin-inline-end: 22px;
+        img{
+            display: block;
+            height: auto;
+            width: 100%;
+        }
+    }
+
+    .second-texto{
+        background-color: transparent;
+        padding: 1.5rem;
+
+        .texto-child{
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            text-align: left;
+            .child-conten{
+                flex-basis: auto;
+                -webkit-box-flex: 1;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
+                -ms-flex-negative: 1;
+                flex-shrink: 1;
+                text-align: left;
+                
+            }
+        }
+
+        .title{
+            color: #363636;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.125;
+            font-family: arvo;
+            display: block;
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+    }
+}

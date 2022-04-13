@@ -1,0 +1,246 @@
+
+:root {
+    --grey-color: #7f8c8d;
+    --primary-color: #4ec0e9;
+    --info-color: #5f9cec;
+    --success-color: #4acfae;
+    --warning-color: #ffce52;
+    --danger-color: #ed5464;
+    --pinck-color: #f27b9b;
+    --orange-color: #eb7132;
+}
+
+$menu-link-active-colors: var(--primary-color), var(--info-color),
+  var(--success-color), var(--warning-color), var(--danger-color),
+  var(--pinck-color), var(--orange-color);
+
+.navbar{
+    //background-color: #ffdd57;
+    height: auto;
+    width: 100%;
+    display: flex;
+    .navbar-info{
+        width: 20%;
+        //background-color: aqua;
+        color: var(--grey-color);
+        .navbar-item{
+            width: 100%;
+            display: flex;
+            padding: 6px;
+            .navbar-img{
+                width: 30%;
+                .img{
+                    width: 43px;
+                    height: 43px;
+                    margin: 2px 0 0 6px;
+                }
+            }
+            .navbar-infoEscuela{
+                width: 70%;
+                height: 10px;
+                margin-top: -15px;
+                p{
+                    height: 7px;
+                }
+            }
+        }
+    }
+
+    .navbar-opciones{
+        width: 80%;
+        //background-color: aquamarine;
+        display: flex;
+
+        nav {
+          &.primary-navigation {
+            display: block;
+          
+            padding: 1px 0 0 0;  
+            text-align: center;
+            font-size: 16px;
+
+            ul{
+              width: 100%;
+              display: block;
+              list-style-type: disc;
+              margin-block-start: 0.8em;
+              margin-block-end: 0.5em;
+              margin-inline-start: 0px;
+              margin-inline-end: 0px;
+              padding-inline-start: 0px;
+              position: relative;
+            }
+        
+            ul li {
+              list-style: none;
+              //margin: 0 auto;
+              //border-left: 2px solid #3ca0e7;
+              display: inline-block;
+              padding: 0 29px;
+              position: relative;
+              text-decoration: none;
+              text-align: center;
+              font-family: arvo;
+              width: 7%;
+
+              &::before{
+                  position: absolute;
+                  content: "";
+                  left: 1rem;
+                  width: 0.25rem;
+                  height: 100%;
+                  background: var(--menu-link-active-color);
+                  transition: 0.6s;
+              }
+
+              .menu-pintar{
+                  --menu-link-color: var(--grey-color);
+                  //position: relative;
+                  background: linear-gradient(var(--menu-link-active-color) 0 100%) left / 0
+                      no-repeat;
+                  color: transparent;
+                  background-clip: text;
+                  -webkit-background-clip: text;
+                  transition: background-size 0.45s 0.04s;
+
+                  &::before {
+                      position: absolute;
+                      content: attr(data-text);
+                      z-index: -1;
+                      color: var(--menu-link-color);
+                  }
+              }
+
+              @for $i from 1 through length($menu-link-active-colors) {
+                  &:nth-child(#{$i}) {
+                    --menu-link-active-color: #{nth($menu-link-active-colors, $i)};
+                  }
+              }
+
+              &:hover {
+                  &::before {
+                    left: calc(90% + 1rem);
+                  }
+            
+                  a {
+                    background-size: 100%;
+                  }
+              }
+            }
+        
+            li a {
+              color: black;
+            }
+        
+            li a:hover {
+              //color: #3ca0e7;
+            }
+        
+            li:hover {
+              cursor: pointer;
+            }
+        
+            ul li ul {
+              visibility: visible;
+              opacity: 0;
+              position: absolute;
+              padding-left: 0;
+              left: 0;
+              display: block;
+              background: white;
+            }
+        
+            ul li:hover > ul,
+            ul li ul:hover {
+              visibility: visible;
+              opacity: 1;
+              display: block;
+              min-width: 250px;
+              text-align: left;
+              padding-top: 20px;
+              box-shadow: 0px 3px 5px -1px #ccc;
+            }
+        
+            ul li ul li {
+              clear: both;
+              width: 100%;
+              text-align: left;
+              margin-bottom: 20px;
+              display: block;
+              border-style: none;
+            }
+        
+            ul li ul li a:hover {
+              padding-left: 10px;
+              //border-left: 2px solid #3ca0e7;
+              transition: all 0.3s ease;
+            }
+          }
+        }
+        
+        a {
+        
+            text-decoration: none;
+        
+            // &:hover {
+            //     color: #3CA0E7;
+            // }
+         
+        }
+        
+         ul li ul li a { transition: all 0.5s ease; }
+
+  }
+
+        // .menu-hover-fill{
+        //     li {
+        //         position: relative;
+            
+        //         &::before {
+        //           position: absolute;
+        //           content: "";
+        //           //top: 0;
+        //           left: -1rem;
+        //           width: 0.25rem;
+        //           height: 100%;
+        //           background: var(--menu-link-active-color);
+        //           transition: 0.6s;
+        //         }
+            
+        //         a {
+        //           --menu-link-color: var(--grey-color);
+        //           position: relative;
+        //           background: linear-gradient(var(--menu-link-active-color) 0 100%) left / 0
+        //             no-repeat;
+        //           color: transparent;
+        //           background-clip: text;
+        //           -webkit-background-clip: text;
+        //           transition: background-size 0.45s 0.04s;
+            
+        //           &::before {
+        //             position: absolute;
+        //             content: attr(data-text);
+        //             z-index: -1;
+        //             color: var(--menu-link-color);
+        //           }
+        //         }
+            
+        //         @for $i from 1 through length($menu-link-active-colors) {
+        //           &:nth-child(#{$i}) {
+        //             --menu-link-active-color: #{nth($menu-link-active-colors, $i)};
+        //           }
+        //         }
+            
+        //         &:hover {
+        //           &::before {
+        //             left: calc(100% + 1rem);
+        //           }
+            
+        //           a {
+        //             background-size: 100%;
+        //           }
+        //         }
+        //     }
+        // }
+    
+}
